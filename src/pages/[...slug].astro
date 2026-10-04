@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('pages');
+
+  return entries.map((entry) => ({
+    params: {
+      slug: entry.id.replace(/\/index$/, ''),
+    },
+    props: {
+      entry,
+    },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{entry.data.title ?? 'サイト'}</title>
+  </head>
+
+  <body>
+    <Content />
+  </body>
+</html>
