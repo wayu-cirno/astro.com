@@ -1,12 +1,13 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getCollection, render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const entries = await getCollection('pages');
+  const entries = await getCollection("pages");
 
   return entries.map((entry) => ({
     params: {
-      slug: entry.id.replace(/\/index$/, ''),
+      slug: entry.id.replace(/\/index$/, ""),
     },
     props: {
       entry,
@@ -18,13 +19,6 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
 
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{entry.data.title ?? 'サイト'}</title>
-  </head>
-
-  <body>
-    <Content />
-  </body>
-</html>
+<Layout title={entry.data.title}>
+  <Content />
+</Layout>

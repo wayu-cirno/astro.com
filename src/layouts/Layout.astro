@@ -1,0 +1,33 @@
+---
+import "../styles/style.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title = "サイト" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+<body>
+    <div class="header">
+        <p>
+            <a href="/">わゆちゃんのホームページ</a>
+        </p>
+    </div>
+    <div class="content">
+        <div class="main">
+        	<slot />
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2026 わゆちゃん</p>
+    </div>
+</body>
+</head>
+</html>
