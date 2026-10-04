@@ -5,7 +5,6 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://wayutyan.github.io',
-  base: '/wayutyan.sites',
+  site: 'https://www.wayutyan.com',
   integrations: [mdx()]
 });

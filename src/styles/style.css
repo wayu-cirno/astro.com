@@ -94,3 +94,8 @@ h3 {
 .xyz {
     width: 50%;
 }
+
+img {
+    width: 50%;
+    height: auto;
+}
