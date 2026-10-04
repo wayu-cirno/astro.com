@@ -1,10 +1,12 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
-
 import mdx from '@astrojs/mdx';
+import remarkBreaks from 'remark-breaks';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://www.wayutyan.com',
-  integrations: [mdx()]
+  integrations: [
+    mdx({
+      remarkPlugins: [remarkBreaks],
+    }),
+  ],
 });
