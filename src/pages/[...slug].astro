@@ -5,14 +5,20 @@ import Layout from "../layouts/Layout.astro";
 export async function getStaticPaths() {
   const entries = await getCollection("pages");
 
-  return entries.map((entry) => ({
-    params: {
-      slug: entry.id.replace(/\/index$/, ""),
-    },
-    props: {
-      entry,
-    },
-  }));
+  return entries.map((entry) => {
+    const slug = entry.id === "index"
+      ? undefined
+      : entry.id.replace(/\/index$/, "");
+
+    return {
+      params: {
+        slug,
+      },
+      props: {
+        entry,
+      },
+    };
+  });
 }
 
 const { entry } = Astro.props;
