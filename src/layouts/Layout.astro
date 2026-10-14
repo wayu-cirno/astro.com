@@ -18,16 +18,15 @@ const { title = "サイト" } = Astro.props;
 <body>
     <div class="header">
         <p>
-            <a href="/">わゆちゃんのホームページ</a>
-        </p>
+            <a href="/" class="header-text">わゆちゃんのホームページ</a></p>
     </div>
-    <div class="content">
-        <div class="main">
-        	<slot />
+    <div class="main">
+        <div class="content">
+            <slot />
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2026 わゆちゃん</p>
+        <p class="tiisaku">Copyright &#40;C&#41; 2026 わゆちゃん All rights reserved.</p>
     </div>
 </body>
 </html>
