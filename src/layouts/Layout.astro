@@ -34,17 +34,6 @@ const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
         <div class="content">
             <slot />
         </div>
-
-        <div class="sidebar">
-            <p class="sidebar-title">サイトメニュー</p>
-            <ul>
-                {menu.map((item) => (
-                    <li>
-                        <a href={item.url}>{item.title}</a>
-                    </li>
-                ))}
-            </ul>
-        </div>
     </div>
     <div class="footer">
         <p class="tiisaku">Copyright &#40;C&#41; 2026 わゆちゃん All rights reserved.</p>
