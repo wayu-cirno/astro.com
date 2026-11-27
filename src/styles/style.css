@@ -1,8 +1,13 @@
 body {
-    background-color: #F6F8FA;
+    background-color: #E5F5FF;
     margin: 0;
     font-family: Meiryo, system-ui;
     font-size: 20px;
+}
+
+.site {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .main {
@@ -33,6 +38,7 @@ body {
     padding: 0 20px;
     margin: 1px;
     font-size: 24px;
+    text-align: center;
 }
 
 .footer {
@@ -116,4 +122,10 @@ img {
         margin: 10px 16px;
         padding: 10px 20px;
     }
+
+    .site {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
 }
