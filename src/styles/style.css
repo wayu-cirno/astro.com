@@ -5,13 +5,27 @@ body {
     font-size: 20px;
 }
 
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
 .content {
     background-color: #ffffff;
     padding: 10px 30px;
     margin: 16px;
-    width: 77%;
+    flex: 1;
+    min-width: 0;
     box-shadow: 5px 5px 10px #b2b2b2;
     border-radius: 10px;
+}
+
+.sidebar {
+    padding: 1px 15px;
+    margin: 16px;
+    width: 220px;
+    flex-shrink: 0;
 }
 
 .header {
@@ -92,4 +106,21 @@ a:active {
 img {
     width: 65%;
     height: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        margin: 10px 16px;
+    }
+
+    .content {
+        width: auto;
+        margin: 10px 16px;
+        padding: 10px 20px;
+    }
 }

@@ -1,19 +1,12 @@
 ---
 import "../styles/style.css";
-import { existsSync, readFileSync } from "node:fs";
-import { parse } from "yaml";
+import siteConfig from "../data/index.json";
 
 interface Props {
   title?: string;
 }
 
 const { title = "サイト" } = Astro.props;
-
-const menuPath = new URL("../content/pages/index.yml", import.meta.url);
-
-const siteConfig = existsSync(menuPath)
-  ? parse(readFileSync(menuPath, "utf-8"))
-  : {};
 
 const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
 ---
@@ -33,6 +26,16 @@ const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
     <div class="main">
         <div class="content">
             <slot />
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-menu">
+                {menu.map((item) => (
+                    <p>
+                        <a href={item.url}>{item.title}</a>
+                    </p>
+                ))}
+            </div>
         </div>
     </div>
     <div class="footer">
