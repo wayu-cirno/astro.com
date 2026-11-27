@@ -81,22 +81,21 @@ h3 {
 }
 
 a {
-    color: #0000ff;
+    color: #42A1C7;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff0000;
     text-decoration: underline;
 }
 
-a:visited {
-    color: #9900FF;
+.s a {
+    color: #000 !important;
+    text-decoration: none !important;
 }
 
-a:active {
-    color: #00cf00;
-    text-decoration: underline;
+.s a:hover {
+    text-decoration: underline !important;
 }
 
 .tiisaku {

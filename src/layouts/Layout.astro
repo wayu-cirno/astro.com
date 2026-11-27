@@ -32,7 +32,7 @@ const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
             <div class="sidebar-menu">
                 {menu.map((item) => (
                     <p>
-                        <a href={item.url}>{item.title}</a>
+                        <a href={item.url} class="s">{item.title}</a>
                     </p>
                 ))}
             </div>
