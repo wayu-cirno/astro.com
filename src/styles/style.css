@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin: 16px;
 }
 
 .content {
