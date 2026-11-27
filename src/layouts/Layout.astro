@@ -19,11 +19,12 @@ const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
     <title>{title}</title>
 </head>
 <body>
-    <div class="header">
+    <div class="site">
+<div class="header">
         <p>
             <a href="/" class="header-text">わゆちゃんのホームページ</a></p>
     </div>
-    <div class="main">
+<div class="main">
         <div class="content">
             <slot />
         </div>
@@ -36,8 +37,15 @@ const menu = Array.isArray(siteConfig?.menu) ? siteConfig.menu : [];
                     </p>
                 ))}
             </div>
+</div>
         </div>
+<div class="footer">
+        <p class="tiisaku">Copyright &#40;C&#41; 2026 わゆちゃん All rights reserved.</p>
     </div>
+    </div>
+</div>
+</body>
+</html>
     <div class="footer">
         <p class="tiisaku">Copyright &#40;C&#41; 2026 わゆちゃん All rights reserved.</p>
     </div>
