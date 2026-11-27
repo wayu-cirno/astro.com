@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404: Not Found">
+    <div class="error-page">
+        <h1>404 Not Found</h1>
+
+        <p>
+            お探しのページが見つかりません
+        </p>
+
+        <p>
+            <a href="/">トップページへ戻る</a>
+        </p>
+    </div>
+</Layout>
+
+<style>
+    .error-page {
+        text-align: center;
+        padding: 40px 10px;
+    }
+
+    .error-page h1 {
+        font-size: 100px;
+        color: #5A75F2;
+        margin: 0;
+    }
+
+    .error-page h2 {
+        border: none;
+    }
+
+    .error-page p {
+        line-height: 1.8;
+    }
+</style>
