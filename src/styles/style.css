@@ -81,20 +81,11 @@ h3 {
 }
 
 a {
-    color: #42A1C7;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.s a {
     color: #000 !important;
     text-decoration: none !important;
 }
 
-.s a:hover {
+a:hover {
     text-decoration: underline !important;
 }
 
