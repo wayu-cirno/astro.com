@@ -88,3 +88,8 @@ a:active {
 .tiisaku {
     font-size: 14px;
 }
+
+img {
+    width: 65%;
+    height: auto;
+}
